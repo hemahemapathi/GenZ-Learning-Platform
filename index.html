@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GEN Z</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function startCountdown() {
+        const endDate = new Date("January 20, 2025 00:00:00").getTime(); // Set the end date
+    
+        const timerInterval = setInterval(() => {
+          const currentDate = new Date().getTime();
+          const distance = endDate - currentDate;
+    
+          if (distance <= 0) {
+            clearInterval(timerInterval);
+            document.getElementById("days").innerHTML = "00";
+            document.getElementById("hours").innerHTML = "00";
+            document.getElementById("minutes").innerHTML = "00";
+            document.getElementById("seconds").innerHTML = "00";
+          } else {
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+            document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+          }
+        }, 1000);
+      }
+    
+      // Start countdown on page load
+      window.onload = startCountdown;
+    </script>
+    
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM5BAZFfwAGXITGxkZ35bOOvQ2OwT4ZyFClA&s" alt="Website logo" />
+      <div class="navigation">
+        <ul>
+          <i id="menu-close" class="fa-sharp fa-regular fa-circle-xmark"></i>
+          <li><a href="#"><b>Home</b></a></li>
+          <li><a href="#about-us"><b>About us</b></a></li>
+          <li><a href="#course"><b>Courses</b></a></li>
+          <li><a href="#"><b>Login</b></a></li>
+          <li><a href="#"><b>SignUp</b></a></li>
+         
+         
+        </ul>
+       </div>
+    </nav>
+
+    
+
+    <!-- Home -->
+    <section id="home">
+      <h2>Enhance Your Future With GenZ</h2>
+      <p>
+        GenZ Learning Platform offers expert-led courses with flexible learning options to help you achieve your goals. Gain valuable skills and global certifications to unlock your full potential and shape your future.
+      </p>
+      <div class="btn">
+        <a class="btn-one" href="#features">Learn more</a>
+        <a class="btn-two" href="#course">Visit Courses</a>
+      </div>
+      <div class="platform-stats">
+        <div class="stat" data-aos="fade-up" data-aos-delay="100">
+          <h3>4.9/5</h3>
+          <p>PlatformRatings</p>
+        </div>
+        <div class="stat" data-aos="fade-up" data-aos-delay="200">
+          <h3>20+</h3>
+          <p>CoursesAvailable</p>
+        </div>
+        <div class="stat" data-aos="fade-up" data-aos-delay="300">
+          <h3>10k+</h3>
+          <p>EnrolledStudents</p>
+        </div>
+        <div class="stat" data-aos="fade-up" data-aos-delay="400">
+          <h3>25k+</h3>
+          <p>SuccessStories</p>
+        </div>
+      </div>
+    </section>
+
+     <!-- About Us Section -->
+<section id="about-us">
+  <h1 style="color: rgb(7, 7, 7);"><b>About Us</b></h1>
+  <p>
+    At GenZ Learning Platform, we are committed to empowering the next generation with accessible, high-quality education. Our expert-driven courses, global certifications, and innovative learning tools help students build the skills they need to excel in the modern world.
+  </p>
+  <div class="team">
+    <h2>Meet Our Team</h2>
+    <div class="team-members">
+      <div class="member">
+        <img src="https://img.freepik.com/free-vector/illustration-businessman_53876-5856.jpg?ga=GA1.1.1447395954.1737107750&semt=ais_hybrid" alt="Team Member 1" />
+        <h4>John Doe</h4>
+        <p>Founder & CEO</p>
+       
+      </div>
+      <div class="member">
+        <img src="https://img.freepik.com/free-vector/illustration-businessman_53876-5856.jpg?ga=GA1.1.1447395954.1737107750&semt=ais_hybrid" alt="Team Member 2" />
+        <h4>Jane Smith</h4>
+        <p>Co-Founder & CTO</p>
+      
+      </div>
+    </div>
+  </div>
+ 
+</section>
+
+   
+
+    <!-- Courses -->
+    <section id="course">
+      <h1><b>Popular Courses</b></h1>
+      <p>Choose Our Courses</p>
+      <div class="course-box">
+        <div class="courses">
+          <img src="https://img.freepik.com/free-photo/programming-background-collage_23-2149901789.jpg?ga=GA1.1.1447395954.1737107750&semt=ais_hybrid" alt="Web Development" />
+          <div class="details">
+            <span>Updated 21/06/23</span>
+            <h6>HTML,CSS</h6>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              
+              <span>(499)</span><br>
+              <span style="text-decoration: line-through;" class ="original">999</span>
+              <span class ="discount"><b>₹499/-</b></span>
+            </div>
+          </div>
+          <div class="cost">Enroll Now</div>
+        </div>
+
+        <div class="courses">
+          <img src="https://img.freepik.com/free-vector/wireframe-robot-ai-artificial-intelligence-robotic-hand-machine-learning-cyber-mind-domination-concept_127544-854.jpg?ga=GA1.1.1447395954.1737107750&semt=ais_hybrid" alt="Web Development" />
+          <div class="details">
+            <span>Updated 30/07/23</span>
+            <h6>ARTIFICIAL INTELLIGENCE</h6>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              
+              <span>(355)</span><br>
+              <span style="text-decoration: line-through;" class ="original">1499</span>
+              <span class ="discount"><b>₹999/-</b></span>
+            </div>
+          </div>
+          <div class="cost">Enroll Now</div>
+        </div>
+
+        <div class="courses">
+          <img src="https://img.freepik.com/free-photo/php-coding-computer-css-data-digital-function-concept_53876-125415.jpg?ga=GA1.1.1447395954.1737107750&semt=ais_hybrid" alt="Web Development" />
+          <div class="details">
+            <span>Updated 11/08/23</span>
+            <h6>PHP</h6>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            
+              <span>(239)</span><br>
+              <span style="text-decoration: line-through;" class ="original">999</span>
+              <span class ="discount"><b>₹499/-</b></span>
+            </div>
+          </div>
+          <div class="cost">Enroll Now</div>
+        </div>
+
+        <div class="courses">
+          <img src="https://img.freepik.com/premium-photo/concept-popular-programming-language-c-plus-plus_102583-4817.jpg?ga=GA1.1.1447395954.1737107750&semt=ais_hybrid" alt="Web Development" />
+          <div class="details">
+            <span>Updated 07/04/24</span>
+            <h6>C++ PROGRAMMING</h6>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(511)</span><br>
+              <span style="text-decoration: line-through;" class ="original">999</span>
+              <span class ="discount"><b>₹499/-</b></span>
+            </div>
+          </div>
+          <div class="cost">Enroll Now</div>
+          
+     
+          
+        </div>
+
+        <div class="courses">
+          <img src="https://img.freepik.com/premium-photo/python-programming-code-language-learning-concept-with-person-laptop_102583-4797.jpg?ga=GA1.1.1447395954.1737107750&semt=ais_hybrid" alt="Web Development" />
+          <div class="details">
+            <span>Updated 21/04/24</span>
+            <h6>PYTHON</h6>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(415)</span><br>
+              <span style="text-decoration: line-through;" class ="original">1499</span>
+              <span class ="discount"><b>₹999/-</b></span>
+            </div>
+          </div>
+          <div class="cost">Enroll Now</div>
+        </div>
+
+        <div class="courses">
+          <img src="https://img.freepik.com/premium-photo/java-programming-code-abstract-technology-background_272306-149.jpg?ga=GA1.1.1447395954.1737107750&semt=ais_hybrid" alt="Web Development" />
+          <div class="details">
+            <span>Updated 26/05/24</span>
+            <h6>JAVA</h6>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              
+              
+              <span>(299)</span><br>
+              <span style="text-decoration: line-through;" class ="original">1499</span>
+              <span class ="discount"><b>₹999/-</b></span>
+            </div>
+          </div>
+          <div class="cost">Enroll Now</div>
+        </div>
+
+        <div class="courses">
+          <img src="https://img.freepik.com/free-vector/ai-machine-learning-template-vector-disruptive-technology-blog-banner_53876-112230.jpg?ga=GA1.1.1447395954.1737107750&semt=ais_hybrid" alt="Web Development" />
+          <div class="details">
+            <span>Updated 05/06/24</span>
+            <h6>MACHINE LEARNING</h6>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+             
+              <span>(430)</span><br>
+              <span style="text-decoration: line-through;" class ="original">1499</span>
+              <span class ="discount"><b>₹999/-</b></span>
+            </div>
+          </div>
+          <div class="cost">Enroll Now</div>
+        </div>
+
+        <div class="courses">
+          <img src="https://img.freepik.com/premium-photo/data-analysis-business-finance-concept_31965-1984.jpg?ga=GA1.1.1447395954.1737107750&semt=ais_hybrid" alt="Web Development" />
+          <div class="details">
+            <span>Updated 18/06/24</span>
+            <h6>DATA ANALYSIS</h6>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              
+              <span>(360)</span><br>
+              <span style="text-decoration: line-through;" class ="original">1499</span>
+              <span class ="discount"><b>₹999/-</b></span>
+            </div>
+          </div>
+          <div class="cost">Enroll Now</div>
+        </div>
+
+        <div class="courses">
+          <img src="https://img.freepik.com/free-vector/cloud-computing-digital-technology-concept-connection_1017-29591.jpg?ga=GA1.1.1447395954.1737107750&semt=ais_hybrid" alt="Web Development" />
+          <div class="details">
+            <span>Updated 15/07/24</span>
+            <h6>CLOUD COMPUTING</h6>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(480)</span><br>
+              <span style="text-decoration: line-through;" class ="original">1499</span>
+              <span class ="discount"><b>₹999/-</b></span>
+            </div>
+          </div>
+          <div class="cost">Enroll Now</div>
+        </div>
+
+        <div class="courses">
+          <img src="https://img.freepik.com/free-vector/neon-cyber-security-concept-with-padlock-circuit_23-2148536303.jpg?ga=GA1.1.1447395954.1737107750&semt=ais_hybrid" alt="Web Development" />
+          <div class="details">
+            <span>Updated 21/8/24</span>
+            <h6>CYBER SECURITY</h6>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(350)</span><br>
+              <span style="text-decoration: line-through;" class ="original">1999</span>
+              <span class ="discount"><b>₹1499/-</b></span>
+            </div>
+          </div>
+          <div class="cost">Enroll Now</div>
+        </div>
+
+        <div class="courses">
+          <img src="https://img.freepik.com/premium-vector/gradient-blockchain-background_23-2151926096.jpg?ga=GA1.1.1447395954.1737107750&semt=ais_hybrid" alt="Web Development" />
+          <div class="details">
+            <span>Updated 21/08/24</span>
+            <h6>BLOCKCHAIN TECHNOLOGY</h6>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(399)</span><br>
+              <span style="text-decoration: line-through;" class ="original">1999</span>
+              <span class ="discount"><b>₹1499/-</b></span>
+            </div>
+          </div>
+          <div class="cost">Enroll Now</div>
+        </div>
+
+        <div class="courses">
+          <img src="https://img.freepik.com/free-vector/gradient-ui-ux-background_23-2149052117.jpg?ga=GA1.1.1447395954.1737107750&semt=ais_hybrid" alt="Web Development" />
+          <div class="details">
+            <span>Updated 21/08/24</span>
+            <h6>UI UX DESIGNING</h6>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(460)</span><br>
+              <span style="text-decoration: line-through;" class ="original">1999</span>
+              <span class ="discount"><b>₹1499/-</b></span>
+            </div>
+          </div>
+          <div class="cost">Enroll Now</div>
+        </div>
+
+        <div class="courses">
+          <img src="https://img.freepik.com/premium-vector/frontend-development-concept-website-interface-design-improvement-programming-coding-it-profession-isolated-flat-vector-illustration_277904-6801.jpg?ga=GA1.1.1447395954.1737107750&semt=ais_hybrid" alt="Web Development" />
+          <div class="details">
+            <span>Updated 01/09/24</span>
+            <h6>FRONT END DEVELOPMENT</h6>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              
+              <span>(500)</span><br>
+              <span style="text-decoration: line-through;" class ="original">2999</span>
+              <span class ="discount"><b>₹2499/-</b></span>
+            </div>
+          </div>
+          <div class="cost">Enroll Now</div>
+        </div>
+
+        <div class="courses">
+          <img src="https://img.freepik.com/free-vector/back-end-development-concept-software-development-process-website-interface-design-improvement-programming-coding-it-profession-isolated-flat-vector-illustration_613284-1064.jpg?ga=GA1.1.1447395954.1737107750&semt=ais_hybrid" alt="Web Development" />
+          <div class="details">
+            <span>Updated 01/09/24</span>
+            <h6>BACK END DEVELOPMENT</h6>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(490)</span><br>
+              <span style="text-decoration: line-through;" class ="original">2999</span>
+              <span class ="discount"><b>₹2499/-</b></span>
+            </div>
+          </div>
+          <div class="cost">Enroll Now</div>
+        </div>
+
+        <div class="courses">
+          <img src="https://img.freepik.com/premium-vector/full-stack-developer-working-computer-it-professional-programmer-coding-website-creation-proccess-computer-technology_277904-5495.jpg?ga=GA1.1.1447395954.1737107750&semt=ais_hybrid" alt="Web Development" />
+          <div class="details">
+            <span>Updated 01/09/24</span>
+            <h6>FULL STACK DEVELOPMENT</h6>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(650)</span><br>
+              <span style="text-decoration: line-through;" class ="original">3999</span>
+              <span class ="discount"><b>₹2999/-</b></span>
+            </div>
+          </div>
+          <div class="cost">Enroll Now</div>
+        </div>
+      </div>
+    </section>
+
+     <!-- Features -->
+     <section id="features">
+      <h1>Awesome Features</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, nisi!</p>
+      <div class="feature-base">
+        <div class="feature-box">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <h3>Scholorship Facility</h3>
+          <p>
+            "We offers generous scholarship opportunities to support deserving students in pursuing their dreams. We believe in breaking financial barriers to ensure education is accessible to all."
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <i class="fa-solid fa-laptop-code"></i>
+          <h3>Online Courses</h3>
+          <p>
+           "We provides a diverse range of online courses designed to fit your schedule and learning pace. With expert instructors and flexible modules, you can gain valuable skills from anywhere."
+          </p>
+        </div>
+
+        <div class="feature-box">
+          <i class="fa-solid fa-award"></i>
+          <h3>Global Certificatiion</h3>
+          <p>
+            "Earn a globally recognized certificate with our GenZ learning platform, showcasing your skills to the world. Stand out in your career with credentials trusted by top industries worldwide."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- community -->
+    <section id="community">
+      <h1>Meet Our Experts</h1>
+      <p class="community-para">
+      "Guiding you with passion, unmatched expertise,
+        empowering your journey to success"
+      </p>
+      <div class="expert-box">
+        <div class="profile">
+          <img
+            src="https://img.freepik.com/free-vector/illustration-customer-service-concept_53876-5883.jpg?ga=GA1.1.1447395954.1737107750&semt=ais_hybrid"
+            alt="profile image"
+          />
+          <h6>John Doe</h6>
+          <p>Web Developer</p>
+        </div>
+
+        <div class="profile">
+          <img
+            src="https://img.freepik.com/free-vector/illustration-customer-service-concept_53876-5883.jpg?ga=GA1.1.1447395954.1737107750&semt=ais_hybrid"
+            alt="profile image"
+          />
+          <h6>Bob Deol</h6>
+          <p>Frontend Developer</p>
+        </div>
+
+        <div class="profile">
+          <img
+            src="https://img.freepik.com/free-vector/illustration-customer-service-concept_53876-5883.jpg?ga=GA1.1.1447395954.1737107750&semt=ais_hybrid"
+            alt="profile image"
+          />
+          <h6>Martin luther</h6>
+          <p>Java Developer</p>  
+
+        </div>
+
+        <div class="profile">
+          <img
+            src="https://img.freepik.com/free-vector/illustration-customer-service-concept_53876-5883.jpg?ga=GA1.1.1447395954.1737107750&semt=ais_hybrid"
+            alt="profile image"
+          />
+          <h6>Lucifier vein</h6>
+          <p>Backend Developer</p>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Register -->
+    <h1>Upcoming Events</h1>
+<section id="register">
+  <div class="reminder">
+    <p>Get 100 Online Courses for Free</p>
+    <h1>Register To Get It</h1>
+    <div class="time">
+      <div class="date" id="days">00 <br />Days</div>
+      <div class="date" id="hours">00 <br />Hours</div>
+      <div class="date" id="minutes">00 <br />Min</div>
+      <div class="date" id="seconds">00 <br />Sec</div>
+    </div>
+  </div>
+
+  <div class="form">
+    <h3>Create Free Account NOW!</h3>
+    <input type="text" placeholder="Name" />
+    <input type="text" placeholder="Email Address" />
+    <input type="text" placeholder="Phone Number" />
+    <div class="btn">
+      <a class="yellow" href="#">Register Now</a>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <h1>What Our Students Say</h1>
+    <div class="testimonial-container">
+      <div class="testimonial">
+        <p>"The courses here transformed my career! Highly recommend."</p>
+        <h4>- Alice Johnson</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Great content, amazing instructors. Learned so much in no time."</p>
+        <h4>- Mike Roberts</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Best platform for online learning. Fantastic support system."</p>
+        <h4>- Sarah Lee</h4>
+      </div>
+    </div>
+  </section>
+
+   <!-- FAQ Section -->
+   <section id="faq">
+    <h1>Frequently Asked Questions</h1>
+    <div class="faq-container">
+      <div class="faq-item">
+        <h3>What is the refund policy?</h3>
+        <p>Our refund policy allows for a full refund within 7 days of purchase if less than 10% of the course has been completed.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Are courses updated regularly?</h3>
+        <p>Yes, we ensure that our courses stay relevant with the latest content.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I contact instructors for help?</h3>
+        <p>Absolutely! Our instructors are here to help and support you throughout your journey.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section id="cta">
+    <h2>Ready to Get Started?</h2>
+    <p>Begin your learning journey with our expert-led courses today!</p>
+    <div class="cta-buttons">
+      <a href="#course" class="btn-primary">Browse Courses</a>
+      <a href="#contact-us" class="btn-secondary">Contact Us</a>
+    </div>
+  </section>
+</body>
+</html>
+
+ <!-- Contact us -->
+
+<section id="contact-us">
+  <div class="container">
+    <div class="contact-header">
+      <h2>Help Center</h2>
+      <p>We'd love to hear from you! Please fill out the form below to get in touch.</p>
+    </div>
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your Name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Your Email" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<section id="privacy-policy">
+  <div class="container">
+    <div class="privacy-header">
+      <h2>Privacy Policy</h2>
+      <p>Your privacy is important to us. Please read the following to understand how we handle your personal information.</p>
+    </div>
+
+    <!-- Data Collection -->
+    <div class="privacy-section">
+      <h3>1. Data We Collect</h3>
+      <p>We collect personal information, such as name, email, and usage data to improve your experience. This data is only used for purposes specified below.</p>
+    </div>
+
+    <!-- Data Use -->
+    <div class="privacy-section">
+      <h3>2. How We Use Your Information</h3>
+      <p>We use your data to improve our services, process requests, and enhance the user experience. We may also send updates and promotional emails based on your preferences.</p>
+    </div>
+
+    <!-- Data Storage and Protection -->
+    <div class="privacy-section">
+      <h3>3. Data Storage and Security</h3>
+      <p>All personal data is stored securely with encryption. Access is granted only to authorized personnel and only for legitimate business needs.</p>
+    </div>
+
+    <!-- User Rights -->
+    <div class="privacy-section">
+      <h3>4. Your Rights</h3>
+      <p>You have the right to access, correct, and delete your data. You can also opt-out of marketing communications at any time by updating your settings.</p>
+    </div>
+
+   <!-- Contact Information -->
+   <div class="contact-info">
+    <h3>Contact Us</h3>
+    <p>If you have any questions or concerns about this privacy policy, please contact us at <a href="mailto:supportgenz@company.com">support@company.com</a>.</p>
+  </div>
+</div>
+</section>
+
+            
+  <!-- Footer -->
+    <footer>
+       <div class="footer-col">
+        <h3>FOLLOW US</h3>
+        <i class="fa-brands fa-facebook  fa-beat fa-2xl" style="color: #0690f9;"></i>
+        <i class="fa-brands fa-instagram  fa-beat fa-2xl" style="color: #c602d4;"></i>
+        <i class="fa-brands fa-linkedin fa-beat fa-2xl" style="color: #74C0FC;"></i>
+        <i class="fa-brands fa-github fa-beat fa-2xl" style="color: #121245;"></i>
+      </div>
+
+      <div class="footer-col">
+        
+        <p><b>
+          SUBSCRIBE FOR GENZ UPDATES!
+        </b>
+        </p>
+        <div class="subscribe">
+          <input type="text" placeholder="Your Email Address" />
+          <a class="white" href="#">SUBSCRIBE</a>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>
+          "All Rights Reserved © 2025 | A Vision by HEMAPATHI "
+        </p>
+        
+      </div>
+    </footer>
+
+    <script>
+      $("#menu-btn").click(function () {
+        $("nav .navigation ul").addClass("active");
+      });
+      $("#menu-close").click(function () {
+        $("nav .navigation ul").removeClass("active");
+      });
+    </script>
+  </body>
+</html>
