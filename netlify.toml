@@ -1,0 +1,3 @@
+[build]
+  publish = "."  # The folder containing index.html
+  command = ""   # No build command for static sites
